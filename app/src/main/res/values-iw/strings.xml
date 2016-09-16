@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">הטבלה המחזורית</string>
+    <string name="Aluminium">אלומיניום</string>
+    <string name="Iodine">יוד</string>
+    <string name="Oxygen">חמצן</string>
+    <string name="Sulfur">גפרית</string>
+    <string name="Silver">כסף</string>
+    <string name="Zinc">אבץ</string>
+    <string name="Beryllium">ברליום</string>
+    <string name="Boron">בור</string>
+    <string name="Bromine">ברום</string>
+    <string name="Calcium">סידן</string>
+    <string name="Carbon">פחמן</string>
+    <string name="Chlorine">כלור</string>
+    <string name="Copper">נחושת</string>
+    <string name="Fluorine">פלואור</string>
+    <string name="Gold">זהב</string>
+    <string name="Helium">הליום</string>
+    <string name="Hydrogen">מימן</string>
+    <string name="Iron">ברזל</string>
+    <string name="Magnesium">מגנזיום</string>
+    <string name="Mercury">כספית</string>
+    <string name="Neon">ניאון</string>
+    <string name="Nitrogen">חנקן</string>
+    <string name="Phosphorus">זרחן</string>
+    <string name="Potassium">אשלגן</string>
+    <string name="Silicon">צורן</string>
+    <string name="correct1">ענית נכון בפעם הראשונה!</string>
+    <string name="correct2">עלית על זה בבחירה השניה!</string>
+    <string name="credit">קרדיט</string>
+    <string name="dontseccede">לא הצלחת:</string>
+    <string name="inFirsttime">הצלחת בפעם הראשונה:</string>
+    <string name="lithium">ליתיום</string>
+    <string name="notcorrect">טעית, שיהיה לך מזל בפעם הבאה!התשובה הנכונה היא: </string>
+    <string name="notcorrect1">נסה שוב</string>
+    <string name="play">התחל לשחק</string>
+    <string name="seccondtry">הצלחת בניסיון השני:</string>
+    <string name="sodium">נתרן</string>
+    <string name="textCredit">נכתב על ידי: איתי פינצי</string>
+    <string name="goback">חזור למסך הראשי</string>
+</resources>

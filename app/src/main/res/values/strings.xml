@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">periodic table</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="setNew" translatable="false">Set new periodic</string>
+    <string name="credit">Credits</string>
+    <string name="play">Start playing</string>
+    <string name="title_activity_game" translatable="false">GameActivity</string>
+    <string name="title_activity_credit" translatable="false">CreditActivity</string>
+    <string name="textCredit">by: Itay Finci</string>
+    <string name="inFirsttime">In the first try: </string>
+    <string name="seccondtry">In the second try: </string>
+    <string name="dontseccede">you did\'nt seccede: </string>
+    <string name="correct1">you are correct in the first try!</string>
+    <string name="correct2">you are got it in the second choice!</string>
+    <string name="notcorrect">unfortunately you are not correct this time have luck next time. the right answer is: </string>
+    <string name="notcorrect1">try again</string>
+    <string name="share" translatable="false">hi,\n\ryour join me and download the PERIODIC TABLE app.\n\r download the app today from the google play store in the url below!\n\r https://goo.gl/dvI2TB</string>
+    <string name="goback">go back to main screen</string>
+
+    <string name="Hydrogen">Hydrogen</string>
+    <string name="lithium">lithium</string>
+    <string name="sodium">Sodium</string>
+    <string name="Potassium">Potassium</string>
+    <string name="Calcium">Calcium</string>
+    <string name="Magnesium">Magnesium</string>
+    <string name="Beryllium">Beryllium</string>
+    <string name="Helium">Helium</string>
+    <string name="Neon">Neon</string>
+    <string name="Fluorine">Fluorine</string>
+    <string name="Oxygen">Oxygen</string>
+    <string name="Nitrogen">Nitrogen</string>
+    <string name="Carbon">Carbon</string>
+    <string name="Boron">Boron</string>
+    <string name="Chlorine">Chlorine</string>
+    <string name="Sulfur">Sulfur</string>
+    <string name="Phosphorus">Phosphorus</string>
+    <string name="Silicon">Silicon</string>
+    <string name="Aluminium">Aluminium</string>
+    <string name="Bromine">Bromine</string>
+    <string name="Iodine">Iodine</string>
+    <string name="Zinc">Zinc</string>
+    <string name="Copper">Copper</string>
+    <string name="Silver">Silver</string>
+    <string name="Gold">Gold</string>
+    <string name="Mercury">Mercury</string>
+    <string name="Iron">Iron</string>
+    <string name="title_activity_results" translatable="false">Results</string>
+</resources>
