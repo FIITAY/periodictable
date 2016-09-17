@@ -14,8 +14,9 @@
     <string name="correct2">you are got it in the second choice!</string>
     <string name="notcorrect">unfortunately you are not correct this time have luck next time. the right answer is: </string>
     <string name="notcorrect1">try again</string>
-    <string name="share" translatable="false">hi,\n\ryour join me and download the PERIODIC TABLE app.\n\r download the app today from the google play store in the url below!\n\r https://goo.gl/dvI2TB</string>
+    <string name="share" translatable="false">hi,\n\rjoin me and download the PERIODIC TABLE app.\n\r download the app today from the google play store in the url below!\n\r https://goo.gl/dvI2TB</string>
     <string name="goback">go back to main screen</string>
+    <string name="headLine">Final Results:</string>
 
     <string name="Hydrogen">Hydrogen</string>
     <string name="lithium">lithium</string>

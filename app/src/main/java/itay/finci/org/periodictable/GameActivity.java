@@ -137,10 +137,12 @@ public class GameActivity extends AppCompatActivity {
         switch (random.nextInt(3)){
             case 0:
                 truebutton = 1;
-                placeholder1 = random.nextInt(periodic.length);
+                do {
+                    placeholder1 = random.nextInt(periodic.length);
+                }while (placeholder1 == placeindata);
                 do{
                     placeholder2 = random.nextInt(periodic.length);
-                }while (placeholder1 == placeholder2);
+                }while (placeholder1 == placeholder2 || placeholder2 == placeindata);
                 if(mode == 0){
                     btOption1.setText(periodic[placeindata].getSymbole());
                     btOption2.setText(periodic[placeholder1].getSymbole());
@@ -153,7 +155,12 @@ public class GameActivity extends AppCompatActivity {
 
                 break;
             case 1:
-                placeholder1 = random.nextInt(periodic.length);
+                do {
+                    placeholder1 = random.nextInt(periodic.length);
+                }while (placeholder1 == placeindata);
+                do{
+                    placeholder2 = random.nextInt(periodic.length);
+                }while (placeholder1 == placeholder2 || placeholder2 == placeindata);
                 do{
                     placeholder2 = random.nextInt(periodic.length);
                 }while (placeholder1 == placeholder2);
@@ -169,10 +176,12 @@ public class GameActivity extends AppCompatActivity {
                 }
                 break;
             case 2:
-                placeholder1 = random.nextInt(periodic.length);
+                do {
+                    placeholder1 = random.nextInt(periodic.length);
+                }while (placeholder1 == placeindata);
                 do{
                     placeholder2 = random.nextInt(periodic.length);
-                }while (placeholder1 == placeholder2);
+                }while (placeholder1 == placeholder2 || placeholder2 == placeindata);
                 truebutton = 3;
                 if (mode == 0){
                     btOption3.setText(periodic[placeindata].getSymbole());
@@ -191,10 +200,12 @@ public class GameActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(truebutton == 1){
                     if(amountofclicks == 0){
-                        Toast.makeText(GameActivity.this, getText(R.string.correct1), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(GameActivity.this, getText(R.string.correct1),
+                                Toast.LENGTH_SHORT).show();
                         inFirstTry++;
                     }else if(amountofclicks ==1){
-                        Toast.makeText(GameActivity.this, getText(R.string.correct2), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(GameActivity.this, getText(R.string.correct2),
+                                Toast.LENGTH_SHORT).show();
                         inSecondTry++;
                     }
                     act();
@@ -204,9 +215,11 @@ public class GameActivity extends AppCompatActivity {
                         amountofclicks =1;
                     }else if(amountofclicks==1){
                         if (mode == 0){
-                            Toast.makeText(GameActivity.this, getText(R.string.notcorrect) + periodic[placeindata].getSymbole() , Toast.LENGTH_SHORT).show();
+                            Toast.makeText(GameActivity.this, getText(R.string.notcorrect)
+                                    + periodic[placeindata].getSymbole() , Toast.LENGTH_SHORT).show();
                         }else if (mode ==1){
-                            Toast.makeText(GameActivity.this, getText(R.string.notcorrect) + periodic[placeindata].getName() , Toast.LENGTH_SHORT).show();
+                            Toast.makeText(GameActivity.this, getText(R.string.notcorrect)
+                                    + periodic[placeindata].getName() , Toast.LENGTH_SHORT).show();
                         }
                         dontSeccede++;
                         act();
@@ -219,13 +232,16 @@ public class GameActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(truebutton ==2){
                     if(amountofclicks == 0){
-                        Toast.makeText(GameActivity.this, getText(R.string.correct1), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(GameActivity.this, getText(R.string.correct1),
+                                Toast.LENGTH_SHORT).show();
                         inFirstTry++;
                     }else if(amountofclicks ==1){
                         if (mode == 0){
-                            Toast.makeText(GameActivity.this, getText(R.string.notcorrect) + periodic[placeindata].getSymbole() , Toast.LENGTH_SHORT).show();
+                            Toast.makeText(GameActivity.this, getText(R.string.notcorrect)
+                                    + periodic[placeindata].getSymbole() , Toast.LENGTH_SHORT).show();
                         }else if (mode ==1){
-                            Toast.makeText(GameActivity.this, getText(R.string.notcorrect) + periodic[placeindata].getName() , Toast.LENGTH_SHORT).show();
+                            Toast.makeText(GameActivity.this, getText(R.string.notcorrect)
+                                    + periodic[placeindata].getName() , Toast.LENGTH_SHORT).show();
                         }
                         inSecondTry++;
                     }
@@ -236,9 +252,11 @@ public class GameActivity extends AppCompatActivity {
                         amountofclicks =1;
                     }else if(amountofclicks==1){
                         if (mode == 0){
-                            Toast.makeText(GameActivity.this, getText(R.string.notcorrect) + periodic[placeindata].getSymbole() , Toast.LENGTH_SHORT).show();
+                            Toast.makeText(GameActivity.this, getText(R.string.notcorrect)
+                                    + periodic[placeindata].getSymbole() , Toast.LENGTH_SHORT).show();
                         }else if (mode ==1){
-                            Toast.makeText(GameActivity.this, getText(R.string.notcorrect) + periodic[placeindata].getName() , Toast.LENGTH_SHORT).show();
+                            Toast.makeText(GameActivity.this, getText(R.string.notcorrect)
+                                    + periodic[placeindata].getName() , Toast.LENGTH_SHORT).show();
                         }
                         dontSeccede++;
                         act();
@@ -251,10 +269,12 @@ public class GameActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(truebutton == 3){
                     if(amountofclicks == 0){
-                        Toast.makeText(GameActivity.this, getText(R.string.correct1), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(GameActivity.this, getText(R.string.correct1),
+                                Toast.LENGTH_SHORT).show();
                         inFirstTry++;
                     }else if(amountofclicks ==1){
-                        Toast.makeText(GameActivity.this, getText(R.string.correct2), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(GameActivity.this, getText(R.string.correct2),
+                                Toast.LENGTH_SHORT).show();
                         inSecondTry++;
                     }
                     act();
@@ -264,9 +284,11 @@ public class GameActivity extends AppCompatActivity {
                         amountofclicks =1;
                     }else if(amountofclicks==1){
                         if (mode == 0){
-                            Toast.makeText(GameActivity.this, getText(R.string.notcorrect) + periodic[placeindata].getSymbole() , Toast.LENGTH_SHORT).show();
+                            Toast.makeText(GameActivity.this, getText(R.string.notcorrect)
+                                    + periodic[placeindata].getSymbole() , Toast.LENGTH_SHORT).show();
                         }else if (mode ==1){
-                            Toast.makeText(GameActivity.this, getText(R.string.notcorrect) + periodic[placeindata].getName() , Toast.LENGTH_SHORT).show();
+                            Toast.makeText(GameActivity.this, getText(R.string.notcorrect)
+                                    + periodic[placeindata].getName() , Toast.LENGTH_SHORT).show();
                         }
                         dontSeccede++;
                         act();

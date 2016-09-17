@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="itay.finci.org.periodictable">
+    package="itay.finci.org.periodictable"
+    android:versionCode="6"
+    android:versionName="1.5.1 build 102">
 
     <application
         android:allowBackup="true"
