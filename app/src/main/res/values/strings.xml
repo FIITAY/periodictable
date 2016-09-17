@@ -17,6 +17,7 @@
     <string name="share" translatable="false">hi,\n\rjoin me and download the PERIODIC TABLE app.\n\r download the app today from the google play store in the url below!\n\r https://goo.gl/dvI2TB</string>
     <string name="goback">go back to main screen</string>
     <string name="headLine">Final Results:</string>
+    <string name="seeList">see list of periotics</string>
 
     <string name="Hydrogen">Hydrogen</string>
     <string name="lithium">lithium</string>
@@ -46,4 +47,5 @@
     <string name="Mercury">Mercury</string>
     <string name="Iron">Iron</string>
     <string name="title_activity_results" translatable="false">Results</string>
+    <string name="title_activity_periotic_list">PerioticList</string>
 </resources>

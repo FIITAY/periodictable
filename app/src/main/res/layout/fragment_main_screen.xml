@@ -22,15 +22,16 @@
         android:textAllCaps="false" />
 
     <Button
-        android:text="@string/setNew"
+        android:text="@string/seeList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="85dp"
-        android:id="@+id/btSetNew"
+        android:id="@+id/btSeeList"
         android:elevation="0dp"
         android:layout_below="@+id/btPlay"
         android:layout_centerHorizontal="true"
-        android:visibility="invisible" />
+        android:visibility="visible"
+        android:textAllCaps="false" />
 
     <Button
         android:text="@string/credit"
@@ -38,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="91dp"
         android:id="@+id/btCredit"
-        android:layout_below="@+id/btSetNew"
+        android:layout_below="@+id/btSeeList"
         android:layout_centerHorizontal="true"
         android:textAllCaps="false" />
 </RelativeLayout>

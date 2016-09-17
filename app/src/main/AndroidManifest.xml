@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="itay.finci.org.periodictable"
     android:versionCode="6"
-    android:versionName="1.5.1 build 114">
+    android:versionName="1.5.1 build 117">
 
     <application
         android:allowBackup="true"
@@ -46,6 +46,15 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="itay.finci.org.periodictable.GameActivity" />
+        </activity>
+        <activity
+            android:name=".PerioticList"
+            android:label="@string/title_activity_periotic_list"
+            android:parentActivityName=".MainScreen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="itay.finci.org.periodictable.MainScreen" />
         </activity>
     </application>
 

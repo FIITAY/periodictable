@@ -66,16 +66,13 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
-        /*
-        need to work on it but in the end of the game
-        Button btSetNew = (Button) findViewById(R.id.btSetNew);
+        Button btSetNew = (Button) findViewById(R.id.btSeeList);
         btSetNew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText(getApplicationContext(), "Set New", Toast.LENGTH_SHORT);
-                toast.show();
+                startActivity(new Intent(getApplicationContext() , PerioticList.class));
             }
-        });*/
+        });
         Button btPlay = (Button) findViewById(R.id.btPlay);
         btPlay.setOnClickListener(new View.OnClickListener() {
             @Override

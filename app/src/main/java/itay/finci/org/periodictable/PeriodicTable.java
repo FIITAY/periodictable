@@ -55,4 +55,7 @@ public class PeriodicTable {
     public Periodic getPeriodic(int place) {
         return periodic[place];
     }
+    public int getNumElements(){
+        return periodic.length;
+    }
 }
