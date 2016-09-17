@@ -10,6 +10,11 @@ public class Periodic {
         symbole = symbole1;
     }
 
+    public Periodic(Periodic p) {
+        name = p.name;
+        symbole = p.symbole;
+    }
+
     public String getName() {
         return name;
     }

@@ -1,5 +1,6 @@
 package itay.finci.org.periodictable;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -19,7 +20,8 @@ public class GameActivity extends AppCompatActivity {
     int index;
     int roundNum;
     final static int MAX_ROUNDS = 10;
-
+    PeriodicTable periodicTable;
+    Periodic[] periodic ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +30,7 @@ public class GameActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
     @Override
@@ -39,6 +42,11 @@ public class GameActivity extends AppCompatActivity {
         }
         index = 0;
         roundNum = 0;
+        //periodicTable = PeriodicTable.getInstance();
+        periodic = new Periodic[27];
+        for (int i = 0; i < periodic.length; i++) {
+            periodic[i] = new Periodic(PeriodicTable.getInstance(getApplicationContext()).getPeriodic(i));
+        }
         act();
     }
 
@@ -48,36 +56,8 @@ public class GameActivity extends AppCompatActivity {
     int amountofclicks;
     int inFirstTry = 0,inSecondTry = 0,dontSeccede = 0;
     int mode = 0;
+
     private void act(){
-        final Periodic[] periodic= {
-                new Periodic(getString(R.string.Hydrogen) , "H"),
-                new Periodic(getString(R.string.lithium) , "Li"),
-                new Periodic(getString(R.string.sodium) , "Na"),
-                new Periodic(getString(R.string.Potassium) , "K"),
-                new Periodic(getString(R.string.Calcium) , "Ca"),
-                new Periodic(getString(R.string.Magnesium) , "Mg"),
-                new Periodic(getString(R.string.Beryllium) , "Be"),
-                new Periodic(getString(R.string.Helium) , "He"),
-                new Periodic(getString(R.string.Neon) , "Ne"),
-                new Periodic(getString(R.string.Fluorine) , "F"),
-                new Periodic(getString(R.string.Oxygen) , "O"),
-                new Periodic(getString(R.string.Nitrogen) , "N"),
-                new Periodic(getString(R.string.Carbon) , "C"),
-                new Periodic(getString(R.string.Boron) , "B"),
-                new Periodic(getString(R.string.Chlorine) , "Cl"),
-                new Periodic(getString(R.string.Sulfur) , "S"),
-                new Periodic(getString(R.string.Phosphorus) , "P"),
-                new Periodic(getString(R.string.Silicon) , "Si"),
-                new Periodic(getString(R.string.Aluminium) , "Al"),
-                new Periodic(getString(R.string.Bromine) , "Br"),
-                new Periodic(getString(R.string.Iodine) , "I"),
-                new Periodic(getString(R.string.Copper) , "Cu"),
-                new Periodic(getString(R.string.Zinc) , "Zn"),
-                new Periodic(getString(R.string.Silver) , "Ag"),
-                new Periodic(getString(R.string.Gold) , "Au"),
-                new Periodic(getString(R.string.Mercury) , "Hg"),
-                new Periodic(getString(R.string.Iron) , "Fe")
-        };
         TextView tvHowFar,tvInFirstTry,tvInSecondTry,tvDontSeccede,tvTheGiven;
         tvHowFar = (TextView) findViewById(R.id.tvHowFar);
         tvInFirstTry = (TextView) findViewById(R.id.tvInFirstTry);
@@ -90,9 +70,9 @@ public class GameActivity extends AppCompatActivity {
         btOption3 = (Button) findViewById(R.id.btOption3);
         String inFirstTimeS,inSecondTimeS,DOntSeccedeS;
         amountofclicks = 0;
-        //seting the text
+        //setting the text
         roundNum++;
-         mode = 4;
+         mode = -1;
         if (roundNum > MAX_ROUNDS)
         {
             Intent intent = new Intent(getApplicationContext() , Results.class);
@@ -134,15 +114,17 @@ public class GameActivity extends AppCompatActivity {
                 break;
         }
         int placeholder1,placeholder2;
+        do {
+            placeholder1 = random.nextInt(periodic.length);
+        }while (placeholder1 == placeindata);
+        do{
+            placeholder2 = random.nextInt(periodic.length);
+        }while (placeholder1 == placeholder2 || placeholder2 == placeindata);
+
+
         switch (random.nextInt(3)){
             case 0:
                 truebutton = 1;
-                do {
-                    placeholder1 = random.nextInt(periodic.length);
-                }while (placeholder1 == placeindata);
-                do{
-                    placeholder2 = random.nextInt(periodic.length);
-                }while (placeholder1 == placeholder2 || placeholder2 == placeindata);
                 if(mode == 0){
                     btOption1.setText(periodic[placeindata].getSymbole());
                     btOption2.setText(periodic[placeholder1].getSymbole());
@@ -155,15 +137,6 @@ public class GameActivity extends AppCompatActivity {
 
                 break;
             case 1:
-                do {
-                    placeholder1 = random.nextInt(periodic.length);
-                }while (placeholder1 == placeindata);
-                do{
-                    placeholder2 = random.nextInt(periodic.length);
-                }while (placeholder1 == placeholder2 || placeholder2 == placeindata);
-                do{
-                    placeholder2 = random.nextInt(periodic.length);
-                }while (placeholder1 == placeholder2);
                 truebutton = 2 ;
                 if (mode == 0){
                     btOption2.setText(periodic[placeindata].getSymbole());
@@ -176,12 +149,6 @@ public class GameActivity extends AppCompatActivity {
                 }
                 break;
             case 2:
-                do {
-                    placeholder1 = random.nextInt(periodic.length);
-                }while (placeholder1 == placeindata);
-                do{
-                    placeholder2 = random.nextInt(periodic.length);
-                }while (placeholder1 == placeholder2 || placeholder2 == placeindata);
                 truebutton = 3;
                 if (mode == 0){
                     btOption3.setText(periodic[placeindata].getSymbole());
